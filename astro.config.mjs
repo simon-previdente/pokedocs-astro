@@ -12,17 +12,12 @@ export default defineConfig({
         starlightOpenAPI([
           {
             base: 'api',
-            schema: './schemas/pokeapi.yml',
+            schema: './.generated/pokeapi.json',
             sidebar: {
               label: 'PokéAPI reference (English)',
               operations: { badges: true },
             },
-            snippets: {
-              operation: {
-                clients: { shell: ['curl'] },
-                default: { target: 'shell', client: 'curl' },
-              },
-            },
+            snippets: { operation: false },
           },
         ]),
       ],

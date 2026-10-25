@@ -11,3 +11,5 @@
 To update it, download the source again, review the diff, update this metadata, and run `npm run check` and `npm run build` before committing.
 
 The source defines the server as `https://pokeapi.co` and already includes `/api/v2/` in its paths. Keep that combination to avoid duplicating the API prefix in generated examples.
+
+Before development and builds, `scripts/prepare-schema.mjs` reads this snapshot and writes an ignored `.generated/pokeapi.json` with cURL, Python, and PHP `x-codeSamples`. Only the generated copy is enriched; this snapshot and its checksum remain unchanged.
