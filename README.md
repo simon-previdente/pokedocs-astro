@@ -92,6 +92,12 @@ An npm override selects patched `form-data` 4.0.6 or later for `httpsnippet`, th
 
 The bilingual pagination guide at `/guides/pagination/` and `/fr/guides/pagination/` uses MDX with native Starlight `Steps`, `Aside`, `Tabs`, and `TabItem` components. Its cURL, Python, and PHP examples retrieve at most two pages. Starlight already supplies the MDX integration; no additional dependency or custom component is needed.
 
+## Mermaid diagrams
+
+The bilingual pagination guide contains a Mermaid flowchart authored in a fenced `mermaid` block. `astro-mermaid` is registered before Starlight and handles Astro 7's Markdown processor, client-side SVG rendering, and light/dark theme changes.
+
+The site still builds as static HTML; diagrams are rendered in the reader's browser and require JavaScript. Their accessible titles/descriptions and the accompanying prose explain the same flow. This first integration is a simple diagram without custom zoom, pan, or simulation controls.
+
 ## Search
 
 Starlight builds the Pagefind search index from static guide and API pages. Search is available in the production build, not in `npm run dev`. To test it locally, run `npm run build` and `npm run preview -- --host 127.0.0.1 --port 4322`.

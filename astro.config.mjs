@@ -1,10 +1,12 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import mermaid from 'astro-mermaid';
 import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi';
 
 export default defineConfig({
   output: 'static',
   integrations: [
+    mermaid({ autoTheme: true, enableLog: false }),
     starlight({
       title: 'pokédocs',
       description: 'Technical documentation for exploring PokéAPI.',

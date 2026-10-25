@@ -30,6 +30,23 @@ Following the returned `next` URL avoids rebuilding pagination parameters yourse
 
 </Aside>
 
+## See the pagination flow
+
+This diagram follows the same two-page limit as the examples below. The numbered steps above describe the flow in text as well.
+
+```mermaid
+flowchart TD
+    accTitle: Retrieve up to two pages of Pokémon
+    accDescr: Request a page, read its results, and stop if next is null or two pages have been read. Otherwise follow next and repeat.
+    A["Request the first page"] --> B["Read results and next"]
+    B --> C{"Is next null?"}
+    C -- Yes --> D["Stop"]
+    C -- No --> E{"Two pages read?"}
+    E -- Yes --> D
+    E -- No --> F["Request the next URL"]
+    F --> B
+```
+
 ## Try two pages
 
 Choose a language. All examples print the JSON responses for at most two pages of five resources.

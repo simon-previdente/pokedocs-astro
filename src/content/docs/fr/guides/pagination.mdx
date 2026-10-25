@@ -30,6 +30,23 @@ Suivre l’URL `next` évite de reconstruire les paramètres de pagination vous-
 
 </Aside>
 
+## Visualiser la pagination
+
+Ce schéma suit la même limite de deux pages que les exemples ci-dessous. Les étapes numérotées ci-dessus décrivent également le parcours en texte.
+
+```mermaid
+flowchart TD
+    accTitle: Récupérer au maximum deux pages de Pokémon
+    accDescr: Demander une page, lire ses résultats et arrêter si next vaut null ou si deux pages ont été lues. Sinon suivre next et recommencer.
+    A["Demander la première page"] --> B["Lire results et next"]
+    B --> C{"next vaut null ?"}
+    C -- Oui --> D["Arrêter"]
+    C -- Non --> E{"Deux pages lues ?"}
+    E -- Oui --> D
+    E -- Non --> F["Demander l’URL next"]
+    F --> B
+```
+
 ## Essayer deux pages
 
 Choisissez un langage. Tous les exemples affichent les réponses JSON de deux pages de cinq ressources au maximum.
