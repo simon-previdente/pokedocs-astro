@@ -9,4 +9,6 @@ A documentation proof of concept built with Astro and Starlight, using [PokéAPI
 
 ## What's next?
 
-This site will bring together guides and a generated API reference in French and English, with request examples in cURL, Python, and PHP.
+Explore bilingual guides with request examples in cURL, Python, and PHP. The generated API reference is currently available in English.
+
+[Browse the API reference](/api/) (English).

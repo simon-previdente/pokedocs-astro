@@ -100,3 +100,7 @@ The complete response also includes abilities, types, moves, and sprites.
 Cache responses when building an application and avoid repeatedly requesting unchanged resources, as requested by the [PokéAPI fair use policy](https://pokeapi.co/docs/v2#fairuse).
 
 See the [official PokéAPI documentation](https://pokeapi.co/docs/v2#pokemon) for the full Pokémon response model.
+
+## Explore the reference
+
+See the generated [Get Pokémon operation](/api/operations/pokemon_retrieve/) for parameters and the response schema.

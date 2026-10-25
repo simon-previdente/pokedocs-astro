@@ -14,11 +14,18 @@
   },
   "dependencies": {
     "@astrojs/markdown-remark": "7.3.4",
+    "@astrojs/markdown-satteri": "0.4.5",
     "@astrojs/starlight": "0.42.7",
-    "astro": "7.4.2"
+    "astro": "7.4.2",
+    "starlight-openapi": "0.27.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
     "typescript": "6.0.3"
+  },
+  "overrides": {
+    "httpsnippet": {
+      "form-data": "^4.0.6"
+    }
   }
 }

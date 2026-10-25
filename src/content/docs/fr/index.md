@@ -9,4 +9,6 @@ Un prototype de documentation construit avec Astro et Starlight, utilisant [Pok�
 
 ## Et ensuite ?
 
-Ce site réunira des guides et une référence API générée en français et en anglais, avec des exemples de requêtes en cURL, Python et PHP.
+Explorez les guides bilingues avec des exemples de requêtes en cURL, Python et PHP. La référence API générée est actuellement disponible en anglais.
+
+[Consulter la référence API](/api/) (en anglais).

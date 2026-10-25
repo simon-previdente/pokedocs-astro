@@ -100,3 +100,7 @@ La réponse complète contient aussi les talents, les types, les capacités et l
 Mettez les réponses en cache dans vos applications et évitez de demander plusieurs fois des ressources inchangées, conformément à la [politique d’utilisation de PokéAPI](https://pokeapi.co/docs/v2#fairuse) (en anglais).
 
 Consultez la [documentation officielle de PokéAPI](https://pokeapi.co/docs/v2#pokemon) (en anglais) pour le modèle complet de la réponse Pokémon.
+
+## Explorer la référence
+
+Consultez l’opération [Get Pokémon](/api/operations/pokemon_retrieve/) (en anglais) pour les paramètres et le schéma de réponse générés.
