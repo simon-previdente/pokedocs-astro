@@ -84,6 +84,8 @@ The official schema and the plugin's reference labels are in English. The plugin
 
 Request examples use resource ID `1` for path parameters and `limit=20&offset=0` where pagination is declared. They are illustrative requests, not a validation of every live endpoint. Response examples remain generated from schema types; use the first-request guide for a verified Pikachu response. The official schema also describes some features marked as local-only, such as the `q` query parameter; those are not available on the public API.
 
+A bounded [French API reference experiment](experiments/openapi-i18n/README.md) verifies that localized routes and search work with a second schema, while plugin labels, sidebar selection, and missing-operation fallback need additional work. It is opt-in and does not change the main site.
+
 ### Dependency compatibility
 
 An npm override selects patched `form-data` 4.0.6 or later for `httpsnippet`, the plugin's snippet generator. This avoids a known multipart field injection vulnerability in its pinned dependency. Reassess the override when updating the plugin. After dependency changes, restart the development server if module resolution errors persist.
