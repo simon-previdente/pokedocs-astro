@@ -68,6 +68,6 @@ Use matching relative filenames for equivalent pages: for example, `src/content/
 
 ## Status
 
-The Astro + Starlight foundation is in place, with French and English welcome pages, a native language picker, and static search indexing. Bilingual guides and the generated OpenAPI reference are the next steps. Implementation progresses through small, focused commits to make each step easy to review and understand. This POC will later be compared with pokedocs-scalar.
+The Astro + Starlight foundation is in place, with French and English welcome pages, a native language picker, and static search indexing. A bilingual first-request guide demonstrates cURL, Python, and PHP examples, linked from the homepages and sidebar. The generated OpenAPI reference is the next step. Implementation progresses through small, focused commits to make each step easy to review and understand. This POC will later be compared with pokedocs-scalar.
 
 The build currently reports warnings for the empty translation collection and the missing custom 404 content. Starlight still generates its default 404 page. Sitemap generation is skipped until a deployment URL is configured through Astro's `site` option.
