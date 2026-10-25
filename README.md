@@ -88,6 +88,14 @@ Request examples use resource ID `1` for path parameters and `limit=20&offset=0`
 
 An npm override selects patched `form-data` 4.0.6 or later for `httpsnippet`, the plugin's snippet generator. This avoids a known multipart field injection vulnerability in its pinned dependency. Reassess the override when updating the plugin. After dependency changes, restart the development server if module resolution errors persist.
 
+## Search
+
+Starlight builds the Pagefind search index from static guide and API pages. Search is available in the production build, not in `npm run dev`. To test it locally, run `npm run build` and `npm run preview -- --host 127.0.0.1 --port 4322`.
+
+Search results follow the current page's language. English search includes guides and API reference pages. French search currently includes only French pages because the API reference has no French version. Pagefind's French interface messages are provided in `src/content/i18n/fr.json` through Starlight's native translation collection.
+
+See [the search validation notes](docs/search-validation.md) for observed results, tested interactions, and the remaining French reference limitation.
+
 ## Python library examples
 
 Use the published open source [Pokébase](https://github.com/PokeAPI/pokebase) package instead of generating a local SDK. Install `pokebase==1.4.1` in a virtual environment; no code generation or Docker is needed by readers. The bilingual guide remains at `/guides/python-sdk/` and `/fr/guides/python-sdk/`.
@@ -105,4 +113,4 @@ Pokébase provides dynamic resource objects and a local cache, not generated typ
 
 The Astro + Starlight foundation is in place, with French and English welcome pages, a native language picker, and static search indexing. A bilingual first-request guide demonstrates cURL, Python, and PHP examples, linked from the homepages and sidebar. The official OpenAPI snapshot now generates the API reference at `/api/`. Implementation progresses through small, focused commits to make each step easy to review and understand. This POC will later be compared with pokedocs-scalar.
 
-The build currently reports warnings for the empty translation collection and the missing custom 404 content. Starlight still generates its default 404 page. Sitemap generation is skipped until a deployment URL is configured through Astro's `site` option.
+The build currently reports a warning for the missing custom 404 content. Starlight still generates its default 404 page. Sitemap generation is skipped until a deployment URL is configured through Astro's `site` option.
