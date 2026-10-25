@@ -88,6 +88,10 @@ Request examples use resource ID `1` for path parameters and `limit=20&offset=0`
 
 An npm override selects patched `form-data` 4.0.6 or later for `httpsnippet`, the plugin's snippet generator. This avoids a known multipart field injection vulnerability in its pinned dependency. Reassess the override when updating the plugin. After dependency changes, restart the development server if module resolution errors persist.
 
+## MDX guides
+
+The bilingual pagination guide at `/guides/pagination/` and `/fr/guides/pagination/` uses MDX with native Starlight `Steps`, `Aside`, `Tabs`, and `TabItem` components. Its cURL, Python, and PHP examples retrieve at most two pages. Starlight already supplies the MDX integration; no additional dependency or custom component is needed.
+
 ## Search
 
 Starlight builds the Pagefind search index from static guide and API pages. Search is available in the production build, not in `npm run dev`. To test it locally, run `npm run build` and `npm run preview -- --host 127.0.0.1 --port 4322`.

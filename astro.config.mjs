@@ -25,7 +25,11 @@ export default defineConfig({
         { slug: '' },
         {
           label: 'Guides',
-          items: [{ slug: 'guides/first-request' }, { slug: 'guides/python-sdk' }],
+          items: [
+            { slug: 'guides/first-request' },
+            { slug: 'guides/pagination' },
+            { slug: 'guides/python-sdk' },
+          ],
         },
         ...openAPISidebarGroups,
       ],
