@@ -17,6 +17,19 @@ Astro, TypeScript, Starlight, starlight-openapi, and npm.
 
 Prefer native features and existing plugins over a custom documentation generator. Use stable, compatible versions when implementing the project.
 
+## Development environment
+
+Install [nvm](https://github.com/nvm-sh/nvm), then run from the project directory:
+
+```sh
+nvm install
+nvm use
+node --version
+npm --version
+```
+
+The `.nvmrc` file pins Node.js to version 26.12.1, the latest stable release when this environment was set up. It includes npm 11.20.0.
+
 ## Sources
 
 - [PokéAPI](https://pokeapi.co/api/v2/)
