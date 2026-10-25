@@ -12,4 +12,4 @@ To update it, download the source again, review the diff, update this metadata, 
 
 The source defines the server as `https://pokeapi.co` and already includes `/api/v2/` in its paths. Keep that combination to avoid duplicating the API prefix in generated examples.
 
-Before development and builds, `scripts/prepare-schema.mjs` reads this snapshot and writes an ignored `.generated/pokeapi.json` with cURL, Python, and PHP `x-codeSamples`. Only the generated copy is enriched; this snapshot and its checksum remain unchanged.
+Before development and builds, `scripts/prepare-schema.mjs` reads this snapshot and writes an ignored `.generated/pokeapi.json` with cURL, Python HTTP, and PHP `x-codeSamples`, plus Pokébase examples on supported detail operations. Only the generated copy is enriched; this snapshot and its checksum remain unchanged.

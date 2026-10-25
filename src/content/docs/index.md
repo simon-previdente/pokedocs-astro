@@ -12,3 +12,5 @@ A documentation proof of concept built with Astro and Starlight, using [PokéAPI
 Explore bilingual guides with request examples in cURL, Python, and PHP. The generated API reference is currently available in English.
 
 [Browse the API reference](/api/) (English).
+
+[Use Pokébase](/guides/python-sdk/) to query PokéAPI with an existing Python library.

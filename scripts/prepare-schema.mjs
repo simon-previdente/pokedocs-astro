@@ -6,7 +6,7 @@ const document = parse(await readFile(new URL('../schemas/pokeapi.yml', import.m
 const templates = await Promise.all(
   [
     { lang: 'sh', label: 'cURL', file: 'request.sh' },
-    { lang: 'python', label: 'Python (standard library)', file: 'request.py' },
+    { lang: 'python', label: 'Python HTTP (standard library)', file: 'request.py' },
     { lang: 'php', label: 'PHP (cURL extension)', file: 'request.php' },
   ].map(async ({ file, ...sample }) => ({
     ...sample,
@@ -14,7 +14,10 @@ const templates = await Promise.all(
   })),
 );
 
+const pokebaseEndpoints = JSON.parse(await readFile(new URL('./pokebase-endpoints.json', import.meta.url), 'utf8'));
+const pokebaseTemplate = await readFile(new URL('./snippets/request-pokebase.py', import.meta.url), 'utf8');
 let count = 0;
+let pokebaseCount = 0;
 for (const [path, pathItem] of Object.entries(document.paths)) {
   const operation = pathItem.get;
   if (!operation) continue;
@@ -40,10 +43,20 @@ for (const [path, pathItem] of Object.entries(document.paths)) {
     ...sample,
     source: source.replaceAll('__REQUEST_URL__', url.href),
   }));
+  // Pokebase lists fetch all resources, so do not present them as equivalent paginated calls.
+  const detail = path.match(/^\/api\/v2\/([^/]+)\/\{id\}\/$/);
+  if (detail && pokebaseEndpoints.includes(detail[1])) {
+    operation['x-codeSamples'].splice(2, 0, {
+      lang: 'python',
+      label: 'Python — Pokébase',
+      source: pokebaseTemplate.replaceAll('__POKEBASE_ENDPOINT__', detail[1]),
+    });
+    pokebaseCount++;
+  }
   count++;
 }
 
 const directory = new URL('../.generated/', import.meta.url);
 await mkdir(directory, { recursive: true });
 await writeFile(new URL('pokeapi.json', directory), JSON.stringify(document, null, 2) + '\n');
-console.log(`Prepared cURL, Python, and PHP samples for ${count} GET operations.`);
+console.log(`Prepared HTTP examples for ${count} operations and Pokébase examples for ${pokebaseCount} supported detail operations.`);
