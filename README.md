@@ -52,7 +52,14 @@ TypeScript 6 is used because the current version of `@astrojs/check` does not su
 
 - `astro.config.mjs`: static output and Starlight configuration.
 - `src/content.config.ts`: documentation collection and schema.
-- `src/content/docs/`: documentation pages (currently the welcome page).
+- `src/content/docs/`: English documentation pages, served at `/`.
+- `src/content/docs/fr/`: equivalent French pages, served at `/fr/`.
+
+## Languages
+
+English is the default language at `/`; French is available at `/fr/`. Starlight provides the language picker and translated interface labels natively.
+
+Use matching relative filenames for equivalent pages: for example, `src/content/docs/index.md` and `src/content/docs/fr/index.md`. Starlight falls back to English when a French translation is missing, so add both versions for each new page.
 
 ## Sources
 
@@ -61,6 +68,6 @@ TypeScript 6 is used because the current version of `@astrojs/check` does not su
 
 ## Status
 
-The Astro + Starlight foundation is in place, with a welcome page and static search indexing. Bilingual guides and the generated OpenAPI reference are the next steps. Implementation progresses through small, focused commits to make each step easy to review and understand. This POC will later be compared with pokedocs-scalar.
+The Astro + Starlight foundation is in place, with French and English welcome pages, a native language picker, and static search indexing. Bilingual guides and the generated OpenAPI reference are the next steps. Implementation progresses through small, focused commits to make each step easy to review and understand. This POC will later be compared with pokedocs-scalar.
 
 The build currently reports warnings for the empty translation collection and the missing custom 404 content. Starlight still generates its default 404 page. Sitemap generation is skipped until a deployment URL is configured through Astro's `site` option.

@@ -7,6 +7,11 @@ export default defineConfig({
     starlight({
       title: 'pokédocs',
       description: 'Technical documentation for exploring PokéAPI.',
+      defaultLocale: 'root',
+      locales: {
+        root: { label: 'English', lang: 'en' },
+        fr: { label: 'Français', lang: 'fr' },
+      },
     }),
   ],
 });
