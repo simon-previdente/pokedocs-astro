@@ -11,6 +11,7 @@ export default defineConfig({
     mermaid({ autoTheme: true, enableLog: false }),
     starlight({
       title: 'pokédocs',
+      customCss: ['./src/styles/custom.css'],
       description: 'Technical documentation for exploring PokéAPI.',
       plugins: [
         starlightOpenAPI([
