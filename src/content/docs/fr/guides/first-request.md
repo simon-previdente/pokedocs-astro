@@ -103,4 +103,4 @@ Consultez la [documentation officielle de PokéAPI](https://pokeapi.co/docs/v2#p
 
 ## Explorer la référence
 
-Consultez l’opération [Get Pokémon](/api/operations/pokemon_retrieve/) (en anglais) pour les paramètres et le schéma de réponse générés.
+Consultez l’opération [Get Pokémon](../../../api/operations/pokemon_retrieve/) (en anglais) pour les paramètres et le schéma de réponse générés.

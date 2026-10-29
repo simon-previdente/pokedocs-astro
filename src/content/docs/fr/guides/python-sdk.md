@@ -55,7 +55,7 @@ Les exemples ont été vérifiés avec Pikachu, Bulbizarre et un talent. Les tal
 
 ## Pagination et couverture
 
-Le choix **Python — Pokébase** est proposé sur les 48 opérations de détail compatibles, comme [Get Pokémon](/api/operations/pokemon_retrieve/) (en anglais). Il est omis sur les autres opérations pour éviter de présenter un appel non pris en charge ou différent.
+Le choix **Python — Pokébase** est proposé sur les 48 opérations de détail compatibles, comme [Get Pokémon](../../../api/operations/pokemon_retrieve/) (en anglais). Il est omis sur les autres opérations pour éviter de présenter un appel non pris en charge ou différent.
 
 Pour les listes, utilisez **Python HTTP**. `APIResourceList` de Pokébase récupère toute la liste de ressources et n’expose pas la même interface `limit` et `offset` que les exemples de la référence. Le catalogue d’endpoints du paquet est également antérieur à certaines ressources de notre spécification actuelle.
 

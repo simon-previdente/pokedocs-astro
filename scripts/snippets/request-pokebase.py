@@ -1,5 +1,5 @@
 # Install: python -m pip install pokebase==1.4.1
-# Setup and limitations: /guides/python-sdk/
+# Setup and limitations: see the Pokébase guide in the Guides sidebar.
 import pokebase as pb
 from pokebase import common
 

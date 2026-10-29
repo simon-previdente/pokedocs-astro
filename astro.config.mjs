@@ -5,6 +5,8 @@ import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi';
 
 export default defineConfig({
   output: 'static',
+  site: 'https://simon-previdente.github.io',
+  base: process.env.GITHUB_PAGES === 'true' ? '/pokedocs-astro/' : '/',
   integrations: [
     mermaid({ autoTheme: true, enableLog: false }),
     starlight({

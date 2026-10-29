@@ -116,6 +116,27 @@ The 48 supported detail operations offer a Python — Pokébase choice. List ope
 
 Pokébase provides dynamic resource objects and a local cache, not generated typed models. Examples explicitly select HTTPS. The source OpenAPI snapshot is unchanged, without SDK-specific schema adaptations. See [the Pokébase validation notes](docs/pokebase-validation.md) for the tested coverage.
 
+## GitHub Pages
+
+The main site is configured for https://simon-previdente.github.io/pokedocs-astro/.
+
+To enable deployment on GitHub:
+
+1. Open this repository's **Settings → Pages**.
+2. Under **Build and deployment**, select **GitHub Actions** as the source.
+3. Push the deployment commit to `main`, or run **Deploy to GitHub Pages** from the Actions tab.
+
+The workflow uses the project's Node/npm versions, checks types, builds the static site (including schema preparation and Pagefind), uploads the Pages artifact, and deploys it. Future pushes to `main` redeploy automatically. No application server, API credentials, or custom secrets are required.
+
+The build job sets `GITHUB_PAGES=true` to enable the `/pokedocs-astro/` base path. Local development keeps `/`. To test the Pages build locally:
+
+```sh
+GITHUB_PAGES=true npm run build
+GITHUB_PAGES=true npm run preview
+```
+
+Open the printed preview URL with `/pokedocs-astro/` appended. Authored links are relative, generated Starlight/OpenAPI links respect Astro's base path, and the French-guide link uses `BASE_URL`. Only the main site is deployed; the French API experiment remains opt-in and is not published.
+
 ## Sources
 
 - [PokéAPI](https://pokeapi.co/api/v2/)
@@ -125,4 +146,4 @@ Pokébase provides dynamic resource objects and a local cache, not generated typ
 
 The Astro + Starlight foundation is in place, with French and English welcome pages, a native language picker, and static search indexing. A bilingual first-request guide demonstrates cURL, Python, and PHP examples, linked from the homepages and sidebar. The official OpenAPI snapshot now generates the API reference at `/api/`. Implementation progresses through small, focused commits to make each step easy to review and understand. This POC will later be compared with pokedocs-scalar.
 
-The build currently reports a warning for the missing custom 404 content. Starlight still generates its default 404 page. Sitemap generation is skipped until a deployment URL is configured through Astro's `site` option.
+The build currently reports a warning for the missing custom 404 content. Starlight still generates its default 404 page. The GitHub Pages site URL is configured, so builds also generate a sitemap.

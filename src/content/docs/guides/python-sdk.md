@@ -55,7 +55,7 @@ The examples were checked with Pikachu, Bulbasaur, and an ability. Null historic
 
 ## Pagination and coverage
 
-The **Python — Pokébase** choice is offered on the 48 compatible detail operations, such as [Get Pokémon](/api/operations/pokemon_retrieve/). It is omitted on other operations rather than displaying an unsupported or different request.
+The **Python — Pokébase** choice is offered on the 48 compatible detail operations, such as [Get Pokémon](../../api/operations/pokemon_retrieve/). It is omitted on other operations rather than displaying an unsupported or different request.
 
 For list operations, use **Python HTTP**. Pokébase's `APIResourceList` fetches the entire resource list and does not expose the same `limit` and `offset` interface as the reference examples. The package's endpoint catalogue also predates some resources in our current specification.
 

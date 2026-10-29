@@ -103,4 +103,4 @@ See the [official PokéAPI documentation](https://pokeapi.co/docs/v2#pokemon) fo
 
 ## Explore the reference
 
-See the generated [Get Pokémon operation](/api/operations/pokemon_retrieve/) for parameters and the response schema.
+See the generated [Get Pokémon operation](../../api/operations/pokemon_retrieve/) for parameters and the response schema.
