@@ -9,3 +9,58 @@
   --sl-color-accent: #047857;
   --sl-color-accent-high: #064e3b;
 }
+
+/* Keep the header dark green in both themes without changing dialog colors. */
+header.header {
+  background-color: #064e3b;
+  border-bottom-color: #047857;
+  color: #fff;
+}
+
+header.header .site-title,
+header.header .right-group a,
+header.header .right-group label,
+header.header button[data-open-modal] {
+  color: #fff;
+}
+
+header.header button[data-open-modal] {
+  background-color: #065f46;
+  border-color: #34d399;
+}
+
+header.header button[data-open-modal]:hover {
+  background-color: #047857;
+  border-color: #a7f3d0;
+}
+
+header.header .right-group select option {
+  background-color: #064e3b;
+  color: #fff;
+}
+
+header.header .social-icons::after {
+  border-color: #34d399;
+}
+
+header.header :is(a, button, select):focus-visible {
+  outline-color: #a7f3d0;
+}
+
+header.header button[data-open-modal] > kbd {
+  background-color: #064e3b;
+  color: #fff;
+}
+
+header.header dialog {
+  color: var(--sl-color-text);
+}
+
+button.sl-menu-button {
+  background-color: #065f46;
+  color: #fff;
+}
+
+button.sl-menu-button:focus-visible {
+  outline-color: #a7f3d0;
+}
